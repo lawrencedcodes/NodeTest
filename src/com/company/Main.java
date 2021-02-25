@@ -4,10 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //create 4 new nodes
 	    Node node0 = new Node(223);
-	    System.out.println("Node0 has a value of "+node0+ "and next node value set to "+node0.getNext());
-
-	    //create 3 new nodes
         Node node1 = new Node(334);
         Node node2 = new Node(50);
         Node node3 = new Node(400);
@@ -17,20 +15,28 @@ public class Main {
         node2.setValue(5000);
         System.out.println("Node2 now has a value of "+node2.getValue());
 
-        //Set value of next Node to node0
+        //Set value of next NodeS
         node0.setNext(node1);
         node1.setNext(node2);
         node2.setNext(node3);
-        System.out.println("The list is now "+node0+" "+node0.getNext()+" "+node1.getNext()+" "+node2.getNext());
+        System.out.println("The list is now "+node0+" "+node0.getNext()+" "+node1.getNext()+" "+node2.getNext()+"\n");
 
         //Get the pointer going
         Node p = node0;
-        System.out.println("Now our pointer p is set to "+node0);
-        System.out.println("Which means the next node in the LinkedList is p.next: "+ p.getNext());
+        System.out.print("Node0 is "+node0+" ");
         p = p.getNext();
-        System.out.println("Now the pointer is at "+p);
+        System.out.println("Calling p.getNext, Node1 is "+ p);
         p = p.getNext();
-        System.out.println("And now the pointer is at "+p+" as we continuallty call p.getNext()");
+        System.out.print("Calling p.getNext again, Node2 is "+p+" ");
+        p = p.getNext();
+        System.out.println("Calling p.getNext again, Node 3 is "+p+"\n");
 
+        //loop structure for easier iteration
+        p = node0;
+        while (p!=null) {
+            System.out.println(" "+p);
+            p = p.getNext();
+        }
+        System.out.println("That's the end of the linked list.");
     }
 }
