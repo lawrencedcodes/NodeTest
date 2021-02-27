@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -45,5 +47,20 @@ public class Main {
         }
         System.out.println("That's the end of the linked list.");
         System.out.println("The total nodes are "+count + ".\n");
+
+        //Let's look for a number
+        Scanner in = new Scanner(System.in);
+        System.out.println("Input the number find: ");
+        int input = in.nextInt();
+
+        boolean found = false;
+        while (p!= null && !found) {
+            if (input == p.getValue()) {
+                found = true;
+                System.out.println("We found your number!");
+                p = p.getNext();
+            };
+
+        }
     }
 }
