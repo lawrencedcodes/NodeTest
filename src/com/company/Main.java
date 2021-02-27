@@ -50,7 +50,7 @@ public class Main {
 
         //Let's look for a number
         Scanner in = new Scanner(System.in);
-        System.out.println("Input the number find: ");
+        System.out.println("Input the number to find: ");
         int input = in.nextInt();
 
         boolean found = false;
@@ -62,5 +62,12 @@ public class Main {
             };
 
         }
+
+        LinkedList myList = new LinkedList();
+        myList.insertFirst(5);
+        myList.insertFirst(3);
+        myList.insertFirst(99);
+        myList.traverse();
+
     }
 }

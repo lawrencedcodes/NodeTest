@@ -1,15 +1,25 @@
 package com.company;
 
 public class LinkedList {
-    private Node hdptr;
+
+    private Node head;
 
     public LinkedList() {
-        hdptr = null;
+        head = null;
     }
 
-    public void insFirst(int data) {
+    public void insertFirst(int data) {
         Node node0 = new Node(data);
-        node0.setNext(hdptr);
-        hdptr = node0;
+        node0.setNext(head);
+        head =node0;
     }
+
+    public void traverse () {
+        Node pointer = head;
+        while (pointer!=null) {
+            System.out.print(pointer);
+            pointer = pointer.getNext();
+        }
+    }
+
 }
