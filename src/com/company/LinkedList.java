@@ -17,7 +17,7 @@ public class LinkedList {
     public void traverse () {
         Node pointer = head;
         while (pointer!=null) {
-            System.out.print(pointer);
+            System.out.print(pointer+"\n");
             pointer = pointer.getNext();
         }
     }

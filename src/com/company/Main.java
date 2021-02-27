@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -63,11 +64,21 @@ public class Main {
 
         }
 
+        //add nodes to LinkedList(class)
         LinkedList myList = new LinkedList();
         myList.insertFirst(5);
         myList.insertFirst(3);
         myList.insertFirst(99);
         myList.traverse();
 
+        LinkedList userList = new LinkedList();
+        Scanner scan = new Scanner(System.in);
+        Random rand = new Random();
+        System.out.println("How many nodes shall I create? ");
+        int userInput = scan.nextInt();
+        for (int i=0; i<userInput; i++) {
+            userList.insertFirst(rand.nextInt(1000));
+        }
+        userList.traverse();
     }
 }
