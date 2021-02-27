@@ -33,10 +33,17 @@ public class Main {
 
         //loop structure for easier iteration
         p = node0;
-        while (p!=null) {
-            System.out.println(" "+p);
-            p = p.getNext();
+        int count = 0;
+        if (p==null) {
+            System.out.println("There are no nodes.");
+        } else {
+            while (p != null) {
+                count += 1;
+                System.out.println(" " + p);
+                p = p.getNext();
+            }
         }
         System.out.println("That's the end of the linked list.");
+        System.out.println("The total nodes are "+count + ".\n");
     }
 }
