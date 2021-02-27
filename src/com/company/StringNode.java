@@ -9,6 +9,7 @@ public class StringNode {
         next = null;
     }
 
+    //getters and setters
     public StringNode getNext() {
         return next;
     }
