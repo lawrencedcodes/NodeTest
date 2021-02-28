@@ -64,6 +64,7 @@ public class Main {
 
         }
 
+        // 2/27/2021 work
         //add nodes to LinkedList(class)
         LinkedList myList = new LinkedList();
         myList.insertFirst(5);
@@ -71,6 +72,7 @@ public class Main {
         myList.insertFirst(99);
         myList.traverse();
 
+        // List with user input
         LinkedList userList = new LinkedList();
         Scanner scan = new Scanner(System.in);
         Random rand = new Random();
