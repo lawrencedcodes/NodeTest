@@ -1,5 +1,7 @@
 package com.company;
 
+import com.sun.istack.internal.NotNull;
+
 public class LinkedList {
 
     private Node head;
@@ -13,6 +15,7 @@ public class LinkedList {
         node0.setNext(head);
         head =node0;
     }
+
     public void insertLast(int data) {
         Node newNode = new Node(data);
         if (head == null) {
@@ -25,6 +28,7 @@ public class LinkedList {
             }
         }
     }
+
     public void deleteLast() {
         if (head == null) {
             return;
@@ -40,10 +44,22 @@ public class LinkedList {
         }
     }
 
+    public void countNodes() {
+
+    }
+
+    public void linearSearch(int data) {
+
+    }
+
+    public void deleteTarget(int data) {
+
+    }
+
     public void deleteAll() {
         head = null;
     }
-    
+
     public void deleteFirst() {
         if (head!=null) {
             head = head.getNext();
@@ -52,10 +68,9 @@ public class LinkedList {
 
     public void traverse () {
         Node pointer = head;
-        while (pointer!=null) {
-            System.out.print(pointer+"\n");
+        while (pointer != null) {
+            System.out.print(pointer + "\n");
             pointer = pointer.getNext();
         }
     }
-
 }
