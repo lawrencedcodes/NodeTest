@@ -7,7 +7,14 @@ public class LinkedList {
     private Node head;
 
     public LinkedList() {
+
         head = null;
+    }
+
+    public class SinglyListNode {
+        int val;
+        SinglyListNode next;
+        SinglyListNode(int x) { val = x; }
     }
 
     public void insertFirst(int data) {
@@ -72,5 +79,17 @@ public class LinkedList {
             System.out.print(pointer + "\n");
             pointer = pointer.getNext();
         }
+    }
+
+    ListNode reverseList(ListNode head) {
+        ListNode previous = null;
+        ListNode current = head;
+        while (current != null) {
+            ListNode nextElement = current.getNext();
+            current.setNext(previous);
+            previous = current;
+            current = nextElement;
+        }
+        return previous;
     }
 }

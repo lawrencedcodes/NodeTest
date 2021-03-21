@@ -16,11 +16,9 @@ public class IntersectTwo {
             len2++;
             p2.setNext(p2);
         }
-
         int diff = 0;
         p1=headA;
         p2=headB;
-
         if(len1 > len2){
             diff = len1-len2;
             int i=0;
@@ -36,7 +34,6 @@ public class IntersectTwo {
                 i++;
             }
         }
-
         while(p1 != null && p2 != null){
             if(p1.getValue() == p2.getValue()){
                 return p1;
@@ -44,7 +41,6 @@ public class IntersectTwo {
             p1 = p1.getNext();
             p2 = p2.getNext();
         }
-
         return null;
     }
 }
